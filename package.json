@@ -1,0 +1,27 @@
+{
+  "name": "ethereum-account-key-value",
+  "version": "1.0.0",
+  "description": "Ethereum contract that maintains a key-value store for each account.",
+  "main": "account_key_value.js",
+  "dependencies": {
+    "web3": "^0.15.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluedroplet/ethereum-account-key-value.git"
+  },
+  "keywords": [
+    "ethereum",
+    "key-value"
+  ],
+  "author": "Jonathan Brown <jbrown@bluedroplet.com>",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/bluedroplet/ethereum-account-key-value/issues"
+  },
+  "homepage": "https://github.com/bluedroplet/ethereum-account-key-value#readme"
+}
