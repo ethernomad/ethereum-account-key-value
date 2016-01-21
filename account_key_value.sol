@@ -8,10 +8,6 @@ contract AccountKeyValue {
 
   event logUpdate(address indexed account, string key) anonymous;
 
-  function valueGet(address account, string key) constant external returns (bytes) {
-    return values[account][key];
-  }
-
   function valueSet(string key, bytes value) external {
     values[msg.sender][key] = value;
     logUpdate(msg.sender, key);
@@ -20,6 +16,10 @@ contract AccountKeyValue {
   function valueDelete(string key) external {
     delete values[msg.sender][key];
     logUpdate(msg.sender, key);
+  }
+
+  function valueGet(address account, string key) constant external returns (bytes) {
+    return values[account][key];
   }
 
 }
