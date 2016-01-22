@@ -21,5 +21,8 @@ var accountKeyValue = accountKeyValueContract.at(accountKeyValueAddress);
 module.exports = {
   valueSet: accountKeyValue.valueSet,
   valueDelete: accountKeyValue.valueDelete,
-  valueGet: accountKeyValue.valueGet
+  valueGet: accountKeyValue.valueGet,
+  filter: function(account) {
+    return web3.eth.filter({fromBlock: 881760, address: accountKeyValueAddress, topics: [account]});
+  }
 };
