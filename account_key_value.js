@@ -1,4 +1,6 @@
+"use strict";
 var Web3 = require('web3');
+var web3;
 
 // @see https://gist.github.com/frozeman/fbc7465d0b0e6c1c4c23
 if (typeof web3 !== 'undefined') {
