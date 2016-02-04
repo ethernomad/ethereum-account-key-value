@@ -13,11 +13,11 @@ else {
   web3.eth.defaultAccount = web3.eth.accounts[0];
 }
 
-// Solc version: 0.2.0-0/Release-Linux/g++/int linked to libethereum-1.1.1-0/Release-Linux/g++/int
+// Solc Version: 0.2.1-0/Release-Linux/g++/int linked to libethereum-1.1.1-0/Release-Linux/g++/int
 
 var accountKeyValueAbi = require('./account_key_value.abi.json');
 var accountKeyValueContract = web3.eth.contract(accountKeyValueAbi);
-var accountKeyValueAddress = '0x5108ff346ccca474fcbcc3a9eed4aae51c239063';
+var accountKeyValueAddress = '0xa04a97f383e03ea5a186415686e66f71deb4dc2f';
 var accountKeyValue = accountKeyValueContract.at(accountKeyValueAddress);
 
 module.exports = {

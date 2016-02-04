@@ -4,22 +4,26 @@
  */
 contract AccountKeyValue {
 
-  mapping (address => mapping (string => bytes)) values;
+  mapping (address => mapping (string => bytes)) accountKeyValues;
 
   event logUpdate(address indexed account, string key) anonymous;
 
   function valueSet(string key, bytes value) external {
-    values[msg.sender][key] = value;
+    accountKeyValues[msg.sender][key] = value;
     logUpdate(msg.sender, key);
   }
 
   function valueDelete(string key) external {
-    delete values[msg.sender][key];
+    delete accountKeyValues[msg.sender][key];
     logUpdate(msg.sender, key);
   }
 
+  function valueGet(string key) constant external returns (bytes) {
+    return accountKeyValues[msg.sender][key];
+  }
+
   function valueGet(address account, string key) constant external returns (bytes) {
-    return values[account][key];
+    return accountKeyValues[account][key];
   }
 
 }
